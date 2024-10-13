@@ -22,5 +22,9 @@ spec:
         name: pythonprom
         ports:
         - containerPort: 5001
-        resources: {}
+        resources: 
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
 status: {}

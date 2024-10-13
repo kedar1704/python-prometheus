@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pythonprom
+  name: pythonprom
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pythonprom
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pythonprom
+    spec:
+      containers:
+      - image: kedar1704/pythonprom
+        name: pythonprom
+        ports:
+        - containerPort: 5001
+        resources: {}
+status: {}
